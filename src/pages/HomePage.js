@@ -49,7 +49,7 @@ class HomePage extends React.Component {
 
     return (
       <section className="homepage">
-        <h2>Catatan Aktif</h2>
+        <h2>Active Note</h2>
         <SeacrhBar
           keyword={this.state.keyword}
           keywordChange={this.onKeywordChangeHandler}

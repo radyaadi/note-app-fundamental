@@ -44,14 +44,14 @@ class NoteInput extends React.Component {
           <input
             type="text"
             className="add-new-page__input__title"
-            placeholder="Catatan Rahasia saya"
+            placeholder="Add your title here"
             value={this.state.title}
             onChange={this.onTitleChangeEventHandler}
           />
           <div
             className="add-new-page__input__body"
             contentEditable="true"
-            data-placeholder="Sebenarnya saya adalah..."
+            data-placeholder="Add your note here"
             value={this.state.body}
             onInput={this.onBodyChangeEventHandler}
           ></div>

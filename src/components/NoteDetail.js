@@ -4,7 +4,15 @@ import { showFormattedDate } from '../utils/dateFormatter';
 import DeleteNoteButton from './buttons/DeleteNoteButton';
 import ArchiveNoteButton from './buttons/ArchiveNoteButton';
 
-function NoteDetail({ id, title, body, createdAt, onDelete, onArchive }) {
+function NoteDetail({
+  id,
+  title,
+  body,
+  createdAt,
+  archived,
+  onDelete,
+  onArchive,
+}) {
   return (
     <>
       <h3 className="detail-page__title">{title}</h3>
@@ -12,7 +20,11 @@ function NoteDetail({ id, title, body, createdAt, onDelete, onArchive }) {
       <div className="detail-page__body">{body}</div>
       <div className="detail-page__action">
         <DeleteNoteButton id={id} onDelete={onDelete} />
-        <ArchiveNoteButton id={id} onArchive={onArchive} />
+        <ArchiveNoteButton
+          id={id}
+          onArchive={onArchive}
+          isArchived={archived}
+        />
       </div>
     </>
   );

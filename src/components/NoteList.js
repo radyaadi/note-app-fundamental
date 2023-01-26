@@ -6,7 +6,7 @@ function NoteList({ notes }) {
   if (!notes.length) {
     return (
       <section className="notes-list-empty">
-        <p className="notes-list__empty">Catatan masih kosong</p>
+        <p className="notes-list__empty">no note available</p>
       </section>
     );
   }

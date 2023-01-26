@@ -8,6 +8,7 @@ import {
   deleteNote,
 } from '../utils/local-data';
 import { useNavigate } from 'react-router-dom';
+import ErrorPage from './ErrorPage';
 
 function NoteDetailWrapper() {
   const navigate = useNavigate();
@@ -51,8 +52,8 @@ class DetailPage extends React.Component {
   }
 
   render() {
-    if (this.state.note === null) {
-      return <p>Movie is not found!</p>;
+    if (this.state.note === undefined) {
+      return <ErrorPage />;
     }
 
     return (

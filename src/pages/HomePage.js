@@ -3,7 +3,7 @@ import { getActiveNotes } from '../utils/local-data';
 import { useSearchParams } from 'react-router-dom';
 import NoteList from '../components/NoteList';
 import AddNoteButton from '../components/buttons/AddNoteButton';
-import SeacrhBar from '../components/SearchBar';
+import SearchBar from '../components/SearchBar';
 
 function HomePageWrapper() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -50,7 +50,7 @@ class HomePage extends React.Component {
     return (
       <section className="homepage">
         <h2>Active Note</h2>
-        <SeacrhBar
+        <SearchBar
           keyword={this.state.keyword}
           keywordChange={this.onKeywordChangeHandler}
         />

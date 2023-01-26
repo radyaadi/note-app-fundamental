@@ -3,7 +3,7 @@ import { FiTrash } from 'react-icons/fi';
 
 function DeleteNoteButton({ id, onDelete }) {
   return (
-    <button className="action" onClick={() => onDelete(id)}>
+    <button className="action" title="Delete Note" onClick={() => onDelete(id)}>
       <FiTrash />
     </button>
   );

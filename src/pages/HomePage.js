@@ -2,12 +2,11 @@ import React from 'react';
 import { getActiveNotes } from '../utils/local-data';
 import { useSearchParams } from 'react-router-dom';
 import NoteList from '../components/NoteList';
-import AddNoteButton from '../components/buttons/AddNoteButton';
 import SearchBar from '../components/SearchBar';
+import AddNoteButton from '../components/buttons/AddNoteButton';
 
 function HomePageWrapper() {
   const [searchParams, setSearchParams] = useSearchParams();
-
   const keyword = searchParams.get('keyword');
 
   function changeSearchParams(keyword) {

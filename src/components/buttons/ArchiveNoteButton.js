@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FiDownload, FiUpload } from 'react-icons/fi';
 
 function ArchiveNoteButton({ id, onArchive, isArchived }) {
@@ -12,5 +13,11 @@ function ArchiveNoteButton({ id, onArchive, isArchived }) {
     </button>
   );
 }
+
+ArchiveNoteButton.propTypes = {
+  id: PropTypes.string.isRequired,
+  onArchive: PropTypes.func.isRequired,
+  isArchived: PropTypes.bool.isRequired,
+};
 
 export default ArchiveNoteButton;

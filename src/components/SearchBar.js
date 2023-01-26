@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function SeacrhBar({ keyword, keywordChange }) {
+function SearchBar({ keyword, keywordChange }) {
   return (
     <section className="search-bar">
       <input
@@ -14,9 +14,9 @@ function SeacrhBar({ keyword, keywordChange }) {
   );
 }
 
-SeacrhBar.propTypes = {
+SearchBar.propTypes = {
   keyword: PropTypes.string.isRequired,
   keywordChange: PropTypes.func.isRequired,
 };
 
-export default SeacrhBar;
+export default SearchBar;

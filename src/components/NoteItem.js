@@ -3,7 +3,7 @@ import { showFormattedDate } from '../utils/dateFormatter';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-function NoteItem({ id, title, body, createdAt, archived }) {
+function NoteItem({ id, title, body, createdAt }) {
   return (
     <article className="note-item">
       <h3 className="note-item__title">

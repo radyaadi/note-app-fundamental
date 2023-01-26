@@ -1,13 +1,13 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import NoteDetail from '../components/NoteDetail';
+import { useNavigate } from 'react-router-dom';
 import {
   getNote,
   archiveNote,
   unarchiveNote,
   deleteNote,
 } from '../utils/local-data';
-import { useNavigate } from 'react-router-dom';
 import ErrorPage from './ErrorPage';
 
 function NoteDetailWrapper() {
@@ -52,11 +52,9 @@ class DetailPage extends React.Component {
   }
 
   render() {
-    if (this.state.note === undefined) {
-      return <ErrorPage />;
-    }
-
-    return (
+    return this.state.note === undefined ? (
+      <ErrorPage />
+    ) : (
       <section className="detail-page">
         {this.state.note.archived ? (
           <NoteDetail

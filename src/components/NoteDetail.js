@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { showFormattedDate } from '../utils/dateFormatter';
+import NoteDetailBody from './NoteDetailBody';
 import DeleteNoteButton from './buttons/DeleteNoteButton';
 import ArchiveNoteButton from './buttons/ArchiveNoteButton';
 
@@ -15,9 +15,7 @@ function NoteDetail({
 }) {
   return (
     <>
-      <h3 className="detail-page__title">{title}</h3>
-      <p className="detail-page__createdAt">{showFormattedDate(createdAt)}</p>
-      <div className="detail-page__body">{body}</div>
+      <NoteDetailBody title={title} body={body} createdAt={createdAt} />
       <div className="detail-page__action">
         <DeleteNoteButton id={id} onDelete={onDelete} />
         <ArchiveNoteButton

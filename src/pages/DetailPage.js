@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import NoteDetail from '../components/NoteDetail';
 import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import {
   getNote,
   archiveNote,
@@ -73,5 +74,10 @@ class DetailPage extends React.Component {
     );
   }
 }
+
+DetailPage.propTypes = {
+  id: PropTypes.string.isRequired,
+  navigate: PropTypes.func.isRequired,
+};
 
 export default NoteDetailWrapper;
